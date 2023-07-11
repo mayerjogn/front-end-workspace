@@ -127,3 +127,67 @@
 ```
 
 - keywords를 사용함으로 옛날에는 검색되게끔 했지만 과한 키워드 추가로 현재는 검색 엔진에서 사용하지 않는다. (구글은 가능)
+
+
+# 글자 태그
+
+## hn(Heading)
+
+- 제목 표시
+- h1(가장 큰 제목)~ h6(가장 작은 제목)
+- 알아서 줄바꿈이 됨 + 볼드체 적용
+
+## p(Paragraph)
+
+- 문단 구분하는 태그
+
+
+## br(Break)
+
+- 줄 바꿈할때 쓰는 태그
+
+## hr(Horizontal)
+
+- 수평 줄 생성 태그
+
+## pre(Preformat)
+
+- 입력 하는대로 화면에 표시하는 태그
+
+## b(Bold), strong
+
+- 글자를 강조
+- 굵게 표시하는 태그
+
+## i(Itelic), em(Emphasized)
+
+- 글자를 기울여서 표시하는 태그
+
+## u(Under line)
+
+- 글자에 밑줄을 표시하는 태그
+
+## s(Strikethrough)
+
+- 취소선 그어주는 태그
+
+## mark
+
+- 형광펜 태그
+
+## small
+
+- 글자를 작게하는 태그
+
+## sup(Superscript Text), sub(SubScript Text)
+
+- 위/아래 첨자 태그
+
+## q, blockquote
+
+- 글을 인용할 경우
+- blockquote는 줄바꿈이 들어가있음
+
+## abbr(Abbreviation)
+
+- 약어 표시 태그
