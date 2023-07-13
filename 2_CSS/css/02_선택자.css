@@ -1,0 +1,80 @@
+/* 1. 전체 선택자*/
+*{
+    color: rgb(134, 70, 177);
+}
+
+/* 2. 태그 선택자 */
+h3{
+    background-color: navajowhite;
+}
+p{
+    color: rgb(29, 9, 5);
+}
+/* 3. 클래스 선택자 */
+.class1{
+    color:lightcoral;
+}
+.class2{
+    font-size: 30px;
+}
+
+#id1{
+    color:orange;
+}
+#selce1, #select2{
+    background-color: blanchedalmond;
+}
+
+/*6. 자식 선택자와 자손 선택자*/
+#test1 > *{
+    background-color: pink;
+}
+#test1 li{
+    color: cornflowerblue;
+}
+
+#test1 >ul > li{
+    background-color: slategrey;
+}
+
+/* 7. 속성 선택자*/
+
+/* div 요소들 중 name 속성값이 name1과 "일치하는" 요소(배경색 : orangered)*/
+/* div 요소들 중 class 속성값에 -c가 "포함" 되어있는 요소(글자색 : red)*/
+
+/* div 요소들 중 name 속성값이 na로 "시작"되는 요소  (배경색 : blue)*/
+
+/* div 요소들 중 class 속성값이 ss로 "끝"*나는 요소 (글자색 : white)*/
+
+div[name=name1]{
+    background-color: orangered;
+}
+
+div[class *= c]{
+    color: red;
+}
+
+div[name^=na]{
+    background-color: blue;
+}
+div[class $=ss]{
+    color: pink;
+}
+
+/* 8. 형제 선택자*/
+#test2+div{
+    background-color: yellow;
+}
+
+#test2+ul{
+    background-color: pink;
+}
+
+#test2~div{
+    background-color: beige;
+}
+
+#test2~ul{
+    background-color: aqua
+    ;
+}
