@@ -20,16 +20,16 @@
     const diffDay = lastDay - date;
 
     const resultDay = Math.floor (diffDay / (1000*60*60*24));  
-    console.log(resultDay);
+    
 
     const resultHour = Math.floor ((diffDay / (1000*60*60))% 24);
-    console.log(resultHour)
+  
 
     const resultMin = Math.floor((diffDay/(1000*60)%60));
-    console.log(resultMin);
+   
 
     const resultSecond = Math.floor (((diffDay/1000) % 60));
-    console.log(resultSecond);
+    
 
     clock.innerText = `${resultDay}일 ${resultHour}시간 ${resultMin}분 ${resultSecond}초 남음`;
 }
