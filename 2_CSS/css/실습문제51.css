@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(32, 19, 78);
+}
+
+.container{  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+.square{
+    width: 5px;
+    height: 60px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 30px;
+    /* transform: scale(50px); */
+    animation: squareAni 3s linear infinite;
+}
+.square:first-child{
+
+}
+.square:nth-child(2){
+
+}
+.square:nth-child(3){
+
+}
+.square:nth-child(4){
+
+}
+.square:nth-child(5){
+
+}
+.square:nth-child(6){
+
+}
+.square:nth-child(7){
+    
+}
+@keyframes squareAni{
+    0%{
+        transform: scale(y,1);
+    }
+    100%{
+        transform: scale(y,0);
+    }
+}
