@@ -13,7 +13,7 @@ body{
     background: white;
     margin: 3px;
     border-radius: 30px;
-    animation: squareScale 1.2s linear infinite;
+    animation: squareScale 1s linear infinite;
 }
 
 .square:nth-child(1){
@@ -23,13 +23,13 @@ body{
     animation-delay: 0.2s;
 }
 .square:nth-child(3){
-    animation-delay: 0.3s;
+    animation-delay: 0.2s;
 }
 .square:nth-child(4){
     animation-delay: 0.2s;
 }
 .square:nth-child(5){
-    animation-delay: 0.3s;
+    animation-delay: 0.1s;
 }
 .square:nth-child(6){
     animation-delay: 0.2s;

@@ -1,0 +1,29 @@
+<!--
+   HTML도 위에서부터 읽어 오기 때문에 h1태그를 불러오기전에 script가 위에있으면 null이 뜸
+   script 연결 태그는 보통 바디 제일 아래에 작성함 
+
+   헤드에도 넣는 방법이있음
+
+   자바스크립트가 절차지향방식이여서 head태그 안에서 자바 스크립트를 연결하면, body 태그에 있는 h1태그를 읽어올 수 가 없음  그걸 해결해주는게 window.addEventLIstener
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <link rel="stylesheet" href="css/03_이벤트.css">   
+    <script defer src="js/03_이벤트.js"></script> <!--defer은 DOMContent이벤트가 끝나는 시점-->
+</head>
+<body>
+    <h1>이벤트</h1>
+    <div class="container">
+        <img src="../../resources/grid2.jpg" alt="">
+        <img src="../../resources/grid3.jpg" alt="">
+        <img src="../../resources/grid4.jpg" alt="">
+        <img src="../../resources/grid5.jpg" alt="">
+        <img src="../../resources/grid6.jpg" alt="">
+
+    </div>
+</body>
+</html>
