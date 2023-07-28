@@ -312,3 +312,45 @@ $('선택자').hover{
 ```js
 $('선택자').trigger('이벤트명');
 ```
+
+<!--parseInt 문자열을 숫자로 바꿔주는거-->
+
+
+# 효과(Effect)
+
+- HTML 문서 내에 애니메이션 효과를 만들기 위한 메소드의 집합을 Effect라고 한다
+
+## show/hide()
+
+- show() : 선택된 요소를 보여주는 메소드
+- hide() : 선택된 요소를 숨겨주는 메소드
+- toggle() : show, hide를 동시에 적용하는 메소드
+<!-- 대괄호는 안넣어도 된다는소리 선택임-->
+```js
+$('선택자').show/hide/toggle([시간], [구간 별 속도], [callback])
+```
+
+## fade()
+
+- fadeIn() : 선택된 요소를 점점 진하게 보여주는 메소드
+- fadeOut() : 선택된 요소를 점점 희미하게 숨겨주는 메소드
+- fadeTo() : 선택된 요소를 설정한 값까지 희미해지는 효과를 주는 메소드
+- fadeToggle() : fadeIn, fadeOut을 동시에 적용하는 메소드
+
+ ```js
+ $('선택자').fadeIn/fadeOut/fadeToggle([시간], [구간 별 속도], [callback])
+ $('선택자').fadeTo([시간], [투명도], [구간 별 속도], [callback])
+ ```
+
+ ## slide()
+
+ - slideDown() : 선택된 요소 위치에서 아래로 요소를 보여주는 메소드
+ - slideUp() : 선택된 요소를 위로 숨겨주는 메소드
+ - slideToggle() : slideDown, SlideUp을 동시에 적용하는 메소드
+
+ ```js
+ $('선택자').slideDown/ slideUp/ slideToggle
+ ([시간], [구간 별 속도], [callback])
+ ```
+
+ **e.target 공부좀 십새야**

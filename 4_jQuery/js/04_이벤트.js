@@ -99,3 +99,39 @@ $('#textarea2').on('keyup',function(e){
     $('#counter').text(currentLength);
     }
 });
+
+// 3) 아이디 조건 확인
+// 사용 가능한 아이디입니다.
+// 사용 불가능한 아이디입니다.
+
+$('#userId').on('keyup',function(e){   
+    const regExp = /^[a-z][A-Z 0-9]{4,12}$/;
+    const a = $(e.target).val();
+    if(regExp.test(a)){ // 사용가능한 아이디
+        $('#idCheck').text('사용 가능한 아이디입니다').css('color', 'green')
+    }else if(a===""){ //아이디 지울때 문구 지우는 조건문
+        $('#idCheck').text("");
+    }else{// 불가능아이디
+        $('#idCheck').text('사용 불가능한 아이디입니다').css('color', 'red')
+    } 
+});
+
+
+// 3. trigger() 메소드
+// $('#area3').on('click', function(e){
+//     let num=0
+//     $('#counter2').text(++num)
+// })
+   
+
+$('#area3').on('click', function(e){
+   let currentCount = parseInt($('#counter2').text());
+   $('#counter2').text(++currentCount);
+})
+
+// trigger 로직 다른 이벤트를 그대로 가져와서 사용할때 씀
+$('#btn').on('click', function(){
+    $('#area3').trigger('click');
+
+})
+
