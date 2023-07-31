@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포트폴리오 문제</title>
+    <!--스타일 태그에 css 작성-->
+    <style>
+        .notice{
+            background-color: orange;
+            color: white;
+            border: 1px solid black;
+                    
+        }
+        .notice2{
+            background-color: bisque;
+            color: black;
+            border: 1px solid black;
+            
+            
+            
+        }
+        .notice3{
+            background-color: bisque;
+            color: black;
+            border: 1px solid black;
+            
+            
+        }
+        .notice4{
+            background-color: bisque;
+            color: black;
+            border: 1px solid black;
+            
+            
+        }
+        .notice5{
+            background-color: bisque;
+            color: black;
+            border: 1px solid black;
+            
+            
+        }
+        .notice6{
+            background-color: bisque;
+            color: black;
+            border: 1px solid black;
+            
+            
+        }
+        .notice7{
+            background: orange;
+            color: white;
+            border: 1px solid black;
+        }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>공지사항 작성하기</legend>
+      <form action="insert.no" method="POST">
+        <table>
+        <label for="title">         
+          <tr>
+            <td>제목
+              <input
+                type="text"
+                name="title"
+                id="title"
+                placeholder="제목을 입력하시오"
+              />
+            </td>
+          </tr>
+        </label>
+        </table>
+        
+        <label for="content"><text>내용
+        <tr>                         
+          <textarea name="content" id="content" cols="30" rows="10" placeholder="내용을 입력하시오.">
+          </textarea>
+          </td>
+          </tr></p>
+        </label>
+<br>
+        <label for="uploadFile">
+         <text>
+            첨부파일
+            <input type="file" name="uploadFile" id="uploadFile" />
+         </text> 
+        </label>
+        <br>
+        <tr>
+          <th colspan="2">
+            <input type="submit" value="작성하기" />
+          </th>
+        </tr>
+      </form>
+    </fieldset>
+
+    <hr />
+    
+   <table class="notice">
+        <tr>
+        <th>
+          <td>번호</td>
+          <td>제목</td>
+          <td>작성자</td>
+          <td>작성일</td>
+          <td>조회수</td>
+        </th>
+    </table>
+    <table class="notice2">
+        <thead>
+          <td>9</td>
+          <td>공지사항 제목 9</td>
+          <td><input type="button" value="바로가기" /></td>
+          <td>user01</td>
+          <td>2021-03-29</td>
+          <td>34</td>
+        </thead>
+</table>
+<table class="notice3">
+        
+          <td>6</td>
+          <td>공지사항 제목 6</td>
+          <td><input type="button" value="바로가기" /></td>
+          <td>answ445</td>
+          <td>2021-03-12</td>
+          <td>67</td>
+    </table>    
+    <table class="notice4">
+          <td>3</td>
+          <td>공지사항 제목 3</td>
+          <td><input type="button" value="바로가기" /></td>
+          <td>testg12</td>
+          <td>2021-03-01</td>
+          <td>98</td>
+          </table>
+       <table class="notice5">
+            <td>2</td>
+            <td>공지사항 제목 2</td>
+            <td><input type="button" value="바로가기" /></td>
+            <td>palwe3</td>
+            <td>2021-01-02</td>
+            <td>85</td>
+          </table>
+          <table class="notice6">
+            <td>1</td>
+            <td>공지사항 제목 1</td>
+            <td><input type="button" value="바로가기" /></td>
+            <td>xml23</td>
+            <td>2020-12-24</td>
+            <td>124</td>
+            </table>
+          </tbody>
+       </table>
+        <table class="notice7">
+          <tfoot>
+            <th>
+            <td>전체공지사항 갯수</td>
+            <td>5개</td>
+            </th>       
+          </tfoot>
+    </tr>
+    </table> 
+     
+  </body>
+</html>

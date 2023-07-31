@@ -1,8 +1,11 @@
 # BOM (Browser Object Model)
+
 <!--BOM은 자바스크립트가 브라우저를 제어하는 느낌-->
+
 - 브라우저와 관련된 객체들
 
 ## window
+
 - 브라우저 창에 대한 설정을 하는 가장 최상위 객체
 
 - 브라우저가 실행될 때 가장 먼저 생성되며 하위에 브라우저 각 요소에 해당하는 객체가 만들어진다.
@@ -71,7 +74,9 @@
 - 사용자의 디스플레이에 대한 정보를 가진 객체다
 
 # DOM (Document Object Model)
+
 <!-- DOM은 HTML 제어-->
+
 - HTML 문서의 태그들을 객체로 생성하고 객체들의 관계(상/하위) 트리 자료구조로 구성한 객체
 
 - document 객체는 window 객체의 하위 객체로 DOM 트리의 가장 최상위 객체
@@ -103,8 +108,7 @@ document.getElementById("아이디");
 - 동일한 class 속성 값을 갖는 태그가 여러개 존재할 수 있기 때문에 배열로 리턴
 
 ```js
-document.getElementsByClassName
-("클래스");
+document.getElementsByClassName("클래스");
 ```
 
 ### name으로 검색
@@ -125,9 +129,7 @@ document.getElementsByName("이름");
 
 ```js
 document.getElementsByTagName("태그");
-
 ```
-
 
 ### CSS 선택자를 이용해서 검색 <!--이걸로 위에꺼 다 커버가능 강사님 픽-->
 
@@ -144,8 +146,8 @@ document.querySelectorAll("선택자");
 - innerHTML : HTML 형식으로 넣는다.
 
 ```js
-문서객체.textContent
-문서객체.innerHTML // innerHTML은 태그가됨
+문서객체.textContent;
+문서객체.innerHTML; // innerHTML은 태그가됨
 ```
 
 ### setAttribute, getAttribute
@@ -159,8 +161,8 @@ document.querySelectorAll("선택자");
 - data-index, data-id, data-role 등 data-의 형식으로 시작하면 어떤 속성이든 필요에 따라 임의로 추가할 수있다
 
 ```js
-문서객체.setAttribute(속성이름, 값)
-문서객체.getAttribute(속성이름)
+문서객체.setAttribute(속성이름, 값);
+문서객체.getAttribute(속성이름);
 ```
 
 ### style 조작
@@ -168,11 +170,11 @@ document.querySelectorAll("선택자");
 - 문서 객체의 스타일을 조작할 때는 style로 접근할 수 있다.
 
 - style 속성은 - 기호 대신 캐멀 케이스로 사용을 해야한다.
-    ex.) backgound-color => backgroundColor
+  ex.) backgound-color => backgroundColor
 
 ```js
-문서객체.style.속성 = "값" // 써먹기도 귀찮고 잘 안씀
-```    
+문서객체.style.속성 = "값"; // 써먹기도 귀찮고 잘 안씀
+```
 
 ### classList
 
@@ -198,7 +200,7 @@ document.querySelectorAll("선택자");
 - appendChild로 부모 객체에 자식 객체를 추가
 
 ```js
-const 자식객체 = document.createElement(문서객체이름);// 태그라 보면됨
+const 자식객체 = document.createElement(문서객체이름); // 태그라 보면됨
 부모객체.appendChild(자식객체);
 ```
 
@@ -209,7 +211,7 @@ const 자식객체 = document.createElement(문서객체이름);// 태그라 보
 - 만약 부모 객체에 접근해야 한다면 parentNode를 사용한다.
 
 ```js
-부모객체(문서객체.parentNode).removeChild(자식객체)
+부모객체(문서객체.parentNode).removeChild(자식객체);
 ```
 
 # 이벤트
@@ -224,7 +226,7 @@ const 자식객체 = document.createElement(문서객체이름);// 태그라 보
 - HTML 태그에 이벤트 핸들러 속성을 이용하여 직접 자바스크립트 코드를 작성하는 방법
 
 ```html
-<button onclick= "수행코드">버튼</button>
+<button onclick="수행코드">버튼</button>
 ```
 
 ### 이벤트 핸들러 프로퍼티 방식
@@ -233,8 +235,8 @@ const 자식객체 = document.createElement(문서객체이름);// 태그라 보
 
 ```js
 문서객체.onclick = function () {
-    // 수행 코드
-}
+  // 수행 코드
+};
 ```
 
 ### addEventListener() 방식
@@ -266,14 +268,14 @@ const 자식객체 = document.createElement(문서객체이름);// 태그라 보
 - 리터럴 함수를 사용하는 것이 일반적이다.
 
 ```js
-const regExp1 = new RegExp('패턴');
+const regExp1 = new RegExp("패턴");
 const regExp2 = /패턴/; // 리터럴 방식 /문자 / 문자 자체도 정규식으로 사용가능
 ```
 
 ### RegExp 객체에서 제공하는 함수
 
 - **정규식.test(문자열)** : 문자열에서 정규식값과 일치하는 값이 있으면 true,
-없으면 false를 리턴 (가장 많이쓰임)
+  없으면 false를 리턴 (가장 많이쓰임)
 
 - 정규식.exec(문자열) : 문자열에서 정규식값과 일치하는 값이 있으면 처음 매칭된 문자열 리턴, 없으면 null을 리턴
 
@@ -281,7 +283,7 @@ const regExp2 = /패턴/; // 리터럴 방식 /문자 / 문자 자체도 정규�
 
 - 문자열.match(정규식) : 문자열에서 정규식값과 일치하는 값 찾아서 리턴
 
-- 문자열.serach(정규식) : 문자열에서 정규식값과 일치하는 값의 시작인덱스 값을 리턴  (만일없다면 -1을 리턴)
+- 문자열.serach(정규식) : 문자열에서 정규식값과 일치하는 값의 시작인덱스 값을 리턴 (만일없다면 -1을 리턴)
 
 - 문자열.replace(정규식, 바꿀값) : 문자열에서 정규식값과 일치하는 첫번째 부분을 바꿀값으로 변경해서 리턴
 
@@ -311,29 +313,28 @@ const regExp = /패턴/플래그;
 
 - {m, n}은 앞선 패턴이 최소 m번 최대 n번 반복되는 문자열을 의미
 
--  ＋ : 앞선 패턴이 최소 한 번 이상 반복되는 문자열을 의미 {1, }
+- ＋ : 앞선 패턴이 최소 한 번 이상 반복되는 문자열을 의미 {1, }
 
 - ? : 앞선 패턴이 최대 한 번 이상 반복되는 문자열을 의미 {0, 1}
-
 
 ### 문자열의 앞, 뒤 구분
 
 - ^ : 문자열의 시작을 의미
-- $ : 문자열의 마지막을 의미 
+- $ : 문자열의 마지막을 의미
 
 ### OR 검색
 
-- [] : [] 내에 문자들 중 하나라도 존재할 경우를 의미 <!-- [] 내의 ^는 not 의미 --> 
+- [ ] : [ ] 내에 문자들 중 하나라도 존재할 경우를 의미 <!-- [] 내의 ^는 not 의미 -->
 
 ### 임의의 문자열 검색
 
 - . : 임의의 문자 한 개를 의미하고, 문자 내용은 무엇이든 상관없다.
 
-### 추가 메타 문자 
+### 추가 메타 문자
 
 - \d : 숫자를 의미
 - \D : 숫자가 아닌 문자를 의미
-- \w : 알파벳, 숫자, 언더 스코어(_)를 의미
-- \W : 알파벳, 숫자, 언더 스코어(_)가 아닌 문자를 의미
+- \w : 알파벳, 숫자, 언더 스코어(\_)를 의미
+- \W : 알파벳, 숫자, 언더 스코어(\_)가 아닌 문자를 의미
 - \s : 공백 문자를 의미 (띄어쓰기, 탭, 줄바꿈)
 - \S : 공백 문자가 아닌 문자를 의미

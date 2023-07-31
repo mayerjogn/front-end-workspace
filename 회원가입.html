@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <style>
+      .back {
+        background-color: rgb(199, 226, 236);
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+      }
+      #usid,
+      #pwd,
+      #pwdch,
+      #ema,
+      #addr {
+        
+       /* position:relative; */
+       /* display: flex; */
+       /* align-items: center; */
+        background-color: rgb(243, 239, 239);        
+        width: 300px;
+        
+      }
+      /* #hide {
+        background-color: rgb(199, 226, 236);
+      } */
+      #page{
+        background-color: rgb(243, 239, 239);   
+        height: 100px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="back">
+        <section id="page">
+      <div id="usid">
+        <label for="">아이디<input type="text" /></label>
+      </div>
+
+      <div id="pwd">
+        <label for="">패스워드 <input type="text" /></label>
+        <!-- <br />
+        <input
+          id="hide"
+          type="text"
+          placeholder="영문자 대/소문자 특수문자, 숫자 포함 8~12"
+        /> -->
+      </div>
+
+      <div id="pwdch">
+        <label for="">패스워드 확인 <input type="text" required /></label>
+      </div>
+
+      <div id="ema">
+        <label for="">이메일 <input type="email" placeholder="                     @"/></label>
+      </div>
+
+      <div id="addr">
+        <label for="addr">주소 <input type="text" /></label>
+      </div>
+
+      <div id="sign">
+        <input type="submit" value="가입" style="border-bottom: none; background-color: green;  width: 300px;
+        height: 50px; 
+        "></input>
+      </div>
+      </section>   
+    </form>
+    <script>
+        const usid = document.querySelector('#.usid');
+        const pwd = document.querySelector('.pwd')
+        const pwdch=document.querySelector('.pwdch')
+
+        function pwd(){
+            const reg = ${/^[A-Z a-z ][7,33]}
+        }
+
+        function pwdch(){
+
+        }
+       
+    </script>
+  </body>
+</html>
