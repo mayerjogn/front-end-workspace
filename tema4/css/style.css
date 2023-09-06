@@ -1,0 +1,107 @@
+body {
+    font-family: "Noto Sans KR", sans-serif;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 15px;
+}
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.board_wrap{
+    width: 1000px;
+    margin: 100px auto;
+}
+
+.board_title{
+    margin-bottom: 30px;
+}
+.board_title strong{
+    font-size: 2rem;
+}
+
+.board_title p {
+    margin-top: 5;
+    font-size: 1.2rem;
+}
+
+.bt_wrap{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0px;
+}
+
+.bt_wrap a{
+    display: inline-block;
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #FF7F38;
+    border-radius: 2px;
+    font-size: 1.4rem;
+}
+
+.bt_wrap a:first-child{
+    margin-left: 0;
+}
+
+.bt_wrap a.on{
+    background-color: #FF7F38;
+    color: #fff;
+}
+
+.board_list{
+    width: 100%;
+    border-top: 2px solid #FF7F38;
+}
+
+.board_list >div{
+    border-bottom: 1px solid #FF7F38;
+    font-size: 0;
+}
+
+.board_list >div.top{
+    border-bottom: 1px solid #FF7F38;
+}
+
+.board_list >div:last-child{
+    border-bottom: 1px solid #FF7F38;
+}
+
+.board_list > div > div{
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.board_list >div>.num{
+    width: 10%;
+}
+
+.board_list>div>.title{
+    width: 60%;
+}
+
+.board_list>div>.writer{
+    width: 10%;
+}
+
+.board_list>div>.date{
+    width: 10%;
+}
+
+.board_list>div>.count{
+    width: 10%;
+}
