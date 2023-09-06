@@ -33,7 +33,7 @@ a{
 }
 
 .board_title p {
-    margin-top: 5;
+    margin-top: 5px;
     font-size: 1.2rem;
 }
 
@@ -86,22 +86,22 @@ a{
     font-size: 1rem;
 }
 
-.board_list >div>.num{
+.board_list .num{
     width: 10%;
 }
 
-.board_list>div>.title{
+.board_list .title{
     width: 60%;
 }
 
-.board_list>div>.writer{
+.board_list .writer{
     width: 10%;
 }
 
-.board_list>div>.date{
+.board_list .date{
     width: 10%;
 }
 
-.board_list>div>.count{
+.board_list .count{
     width: 10%;
 }
