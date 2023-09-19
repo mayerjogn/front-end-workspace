@@ -90,6 +90,7 @@ const App = () => {
     setBeverages(newList);
   };
 
+  // 이 아래 element={<{} />} 이게 Route 설정 ex) a 태그
   return (
     <BrowserRouter>
       <h1>Cafe</h1>
