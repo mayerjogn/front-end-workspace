@@ -24,6 +24,7 @@ const Home = ({ list, deleteBeverage }) => {
         </tr>
       </thead>
       <tbody>
+         {/* map은 전체를 불러온다. */}
         {list.map((item) => (
           <tr key={item.id}>
             <td>{item.id}</td>
@@ -40,13 +41,19 @@ const Home = ({ list, deleteBeverage }) => {
     </table>
   );
 };
+
+// prop 방식으로 하면 귀찮기 때문에 요소를 바로 셋팅
 const Create = ({ addBeverage }) => {
   const navigate = useNavigate();
   const onSubmit = (event) => {
+  // 하위 컴포넌트가 상위 컴포넌트에게 데이터를 넘길수 없다
+
+  // 새로고침 없이 페이지 이동
     event.preventDefault();
     const title = event.target.title.value;
     const desc = event.target.desc.value;
     addBeverage(title, desc);
+  // 이동하고 싶은 주소로 설정
     navigate("/");
   };
   return (
@@ -96,9 +103,11 @@ const App = () => {
       <h1>Cafe</h1>
       <ul>
         <li>
+            {/* 새로고침 없이 a태그 기능을 해주는 요소 */}
           <Link to="/">목록</Link>
         </li>
         <li>
+           {/* Link와 같은 기능이지만 클래스 속성에 active가 붙는다 */}
           <Link to="/create">추가</Link>
         </li>
       </ul>
