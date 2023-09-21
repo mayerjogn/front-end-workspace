@@ -1,0 +1,8 @@
+#postList{
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1em;
+}
+#postList.best a{
+    background-color: aqua;
+}
