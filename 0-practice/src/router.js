@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Layout from './components/Layout';
-import Post from './pages/Post';
+import BestPost from './pages/BestPost';
+import ViewPost from './pages/ViewPost';
 
 const router = createBrowserRouter([
     {
@@ -10,7 +11,12 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Post />,
+                element: <BestPost />,
+            },
+
+            {
+                path: 'ViewPost',
+                element: <ViewPost />,
             },
         ],
     },

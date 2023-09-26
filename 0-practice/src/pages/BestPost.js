@@ -1,6 +1,6 @@
 import '../css/Post.css';
 
-const Post = () => {
+const BestPost = () => {
     return (
         <>
             <article id="list">
@@ -120,4 +120,4 @@ const Post = () => {
     );
 };
 
-export default Post;
+export default BestPost;
