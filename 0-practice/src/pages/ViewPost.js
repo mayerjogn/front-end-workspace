@@ -1,7 +1,22 @@
 import '../css/ViewPost.css';
 import UnderPostList from '../components/UnderPostList';
+import PageNation from'../components/PageNation';
+import { useState } from "react";
 
+
+const Btn =({click,text})=>{
+    return <button onClick={click}>{text}</button>;
+};
 const ViewPost = () => {
+
+    const Counter =() =>{
+            const [plus, setPlus] = useState(0);
+    const plus =() =>{
+        setPlus(plus + 1);
+};
+
+    }
+
     return (
         <>
             <main id="main">
@@ -35,7 +50,7 @@ const ViewPost = () => {
                                     <div className="dot"></div>
                                     <div className="viewCount">안에 svg랑 path 넣어줘야함</div>
                                     <div className="dot"></div>
-                                    <div className="likeCount">이미지파일이랑 따봉갯수</div>
+                                    <div className="likeCount">👍 따봉갯수</div>
                                 </div>
                             </div>
                         </div>
@@ -52,9 +67,9 @@ const ViewPost = () => {
                     <div className="customHtml"></div>
 
                     <div className="likeContainer">
-                        <button id="like" className="like">
-                            <span>코하하</span>
-                        </button>
+                        
+                            <Btn text="코하하 👍" Click={Counter}>0</Btn>
+                        
                         <button id="scrap" className="scrap">
                             스크랩
                         </button>
@@ -103,8 +118,9 @@ const ViewPost = () => {
                         <div className="right"></div>
                     </div>
                 </div>
+               
                 <UnderPostList />
-
+                <PageNation></PageNation>
                 <section id="modal" className="class">
                     <div class="container share">
                         <div class="urlLink">

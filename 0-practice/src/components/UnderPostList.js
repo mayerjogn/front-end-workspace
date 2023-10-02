@@ -41,7 +41,7 @@ const UnderPostList = () => {
                             </div>
                             <div className="dot"></div>
                             <div className="likeCount number">
-                                <i className="like">좋아요 갯수</i>
+                                <i className="like">👍</i>
                             </div>
                         </div>
                     </div>
