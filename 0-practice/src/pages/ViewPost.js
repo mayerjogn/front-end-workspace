@@ -1,22 +1,10 @@
 import '../css/ViewPost.css';
 import UnderPostList from '../components/UnderPostList';
-import PageNation from'../components/PageNation';
-import { useState } from "react";
+import PageNation from '../components/PageNation';
+import Counter from '../components/Counter';
+import RightModal from '../components/RightModal';
 
-
-const Btn =({click,text})=>{
-    return <button onClick={click}>{text}</button>;
-};
 const ViewPost = () => {
-
-    const Counter =() =>{
-            const [plus, setPlus] = useState(0);
-    const plus =() =>{
-        setPlus(plus + 1);
-};
-
-    }
-
     return (
         <>
             <main id="main">
@@ -52,6 +40,9 @@ const ViewPost = () => {
                                     <div className="dot"></div>
                                     <div className="likeCount">👍 따봉갯수</div>
                                 </div>
+                                <div className="right">
+                                    <RightModal></RightModal>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -67,11 +58,13 @@ const ViewPost = () => {
                     <div className="customHtml"></div>
 
                     <div className="likeContainer">
-                        
-                            <Btn text="코하하 👍" Click={Counter}>0</Btn>
-                        
+                        <div id="like" className="like">
+                            <Counter></Counter>
+                        </div>
+
                         <button id="scrap" className="scrap">
                             스크랩
+                            <span>🔖</span>
                         </button>
                     </div>
                     <div className="listAndEdit">
@@ -118,13 +111,13 @@ const ViewPost = () => {
                         <div className="right"></div>
                     </div>
                 </div>
-               
+
                 <UnderPostList />
                 <PageNation></PageNation>
-                <section id="modal" className="class">
+                {/* <section id="modal" className="class">
                     <div class="container share">
                         <div class="urlLink">
-                            <a href="#">{/* <img /> */}</a>
+                            <a href="#"></a>
                         </div>
                     </div>
                     <div class="container removeArticle">
@@ -165,7 +158,7 @@ const ViewPost = () => {
                         <button>확인</button>
                     </div>
                     <div className="background"></div>
-                </section>
+                </section> */}
             </main>
         </>
     );

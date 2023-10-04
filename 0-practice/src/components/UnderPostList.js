@@ -28,7 +28,7 @@ const UnderPostList = () => {
                             <span className="title">
                                 <i></i>
                                 <span className="text">기타취미 &nbsp;</span>
-                                <span className="commentCount">11</span>
+                                <span className="commentCount">댓글 갯수11</span>
                             </span>
                         </div>
                         <div className="etc">
