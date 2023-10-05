@@ -1,6 +1,5 @@
 import '../css/PostComp.css';
 
-
 const PostComp = () => {
     return (
         <>
@@ -33,7 +32,8 @@ const PostComp = () => {
                                 </div>
                                 <div className="dot">{/* :: after */}</div>
                                 <div className="likeCount">
-                                <span className="like Icon">👍</span>
+                                    <span className="like Icon">👍</span>
+                                    {/*나중에 이모티콘 수정*/}
                                 </div>
                             </div>
                         </div>
@@ -67,12 +67,12 @@ const PostComp = () => {
                                 </div>
                                 <div className="dot">{/* :: after */}</div>
                                 <div className="likeCount">
-                                <span className="like Icon">👍</span>
+                                    <span className="like Icon">👍</span>
                                 </div>
                             </div>
                         </div>
                     </a>
-                </section>         
+                </section>
             </article>
         </>
     );

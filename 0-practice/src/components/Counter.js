@@ -10,9 +10,10 @@ const StyledLikeBtn = styled.button`
     height: auto;
     padding: 10px;
     font-size: 1em;
-    color: black;
+    color: grey;
+    font-size: 1.07em;
     word-break: keep-all;
-    background-color: rgb(0 0 0 / 5%);
+    background-color: antiquewhite;
     border: 0;
     border-radius: 6px;
     align-items: center;
@@ -26,13 +27,14 @@ const Counter = () => {
     const [counter, setCounter] = useState(0);
     const plus = () => {
         setCounter(counter + 1);
+        alert('코하하하하');
     };
     return (
         <StyledLikeBtn>
-            <button style={{ border: 'none' }} onClick={plus}>
+            <div type="button" style={{ border: 'none', backgroundColor: 'antiquewhite' }} onClick={plus}>
                 코하하👍
-            </button>
-            <span>{counter}</span>
+            </div>
+            <span style={{ color: '#ff7f38' }}>{counter}</span>
         </StyledLikeBtn>
     );
 };

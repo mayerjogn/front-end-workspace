@@ -1,22 +1,22 @@
 let maxScrollValue;
-const progressBar = document.querySelector('.progress-bar')
+const progressBar = document.querySelector('.progress-bar');
 
-function resizeHandler(){
-    maxScrollValue=document.body.offsetHeight - window.innerHeight;
+function resizeHandler() {
+    maxScrollValue = document.body.offsetHeight - window.innerHeight;
     // 전체 스크롤 할 수 있는 범위 = 바디 전체 높이 - 윈도우 현재 창의 높이를 뺀거
 }
 
-window.addEventListener('scroll',function(){
-    console.log((window.scrollY / maxScrollValue)*100);
-    progressBar.style.width = (window.scrollY / maxScrollValue)*100 + '%';
+window.addEventListener('scroll', function () {
+    console.log((window.scrollY / maxScrollValue) * 100);
+    progressBar.style.width = (window.scrollY / maxScrollValue) * 100 + '%';
     // console.log(window.pageXOffset); // deprecated 쓰지말라는건데
 
-    // console.log(window.scrollY);  
+    // console.log(window.scrollY);
     // console.log(document.body.offsetHeight);
-    // console.log(window.innerHeight);   
+    // console.log(window.innerHeight);
 });
 
-window.addEventListener('resize',resizeHandler);
+window.addEventListener('resize', resizeHandler);
 resizeHandler();
 
 // navigation click event
@@ -24,20 +24,19 @@ const nav = document.querySelector('nav');
 let currentNav;
 
 function navHandler(e) {
-    if(currentNav){
-        currentNav.style.backgroundColor='transparent';
-        currentNav.style.color='black'
+    if (currentNav) {
+        currentNav.style.backgroundColor = 'transparent';
+        currentNav.style.color = 'black';
     }
 
-    if(e.target!==e.currentTarget){
+    if (e.target !== e.currentTarget) {
+        e.target.style.backgroundColor = 'black';
 
-    e.target.style.backgroundColor='black';
+        e.target.style.color = 'white';
 
-    e.target.style.color='white';
-
-    currentNav = e.target;
-    }  
-    // console.log(e.target);    
+        currentNav = e.target;
+    }
+    // console.log(e.target);
 }
 nav.addEventListener('click', navHandler);
 
@@ -48,26 +47,25 @@ const section3 = document.querySelector('#section3');
 
 let currentSection = section1;
 
-window.addEventListener('wheel',function(event){
-    if(event.deltaY>0){// 휠을 아래로 내린경우
-        if(currentSection === section1){
-            window.scrollTo({top : section2.offsetTop, behavior:'smooth'});
+window.addEventListener('wheel', function (event) {
+    if (event.deltaY > 0) {
+        // 휠을 아래로 내린경우
+        if (currentSection === section1) {
+            window.scrollTo({ top: section2.offsetTop, behavior: 'smooth' });
 
             currentSection = section2;
-
-        }else if(currentSection === section2){
-            window.scrollTo({top : section3.offsetTop, behavior:'smooth'});
+        } else if (currentSection === section2) {
+            window.scrollTo({ top: section3.offsetTop, behavior: 'smooth' });
             currentSection = section3;
         }
-    }else{// 휠을 위로 올린 경우
-        if(currentSection === section3){
-            window.scrollTo({top : section2.offsetTop, behavior:'smooth'});
+    } else {
+        // 휠을 위로 올린 경우
+        if (currentSection === section3) {
+            window.scrollTo({ top: section2.offsetTop, behavior: 'smooth' });
 
             currentSection = section2;
-
-
-        }else if(currentSection === section2){
-            window.scrollTo({top : section1.offsetTop, behavior:'smooth'});
+        } else if (currentSection === section2) {
+            window.scrollTo({ top: section1.offsetTop, behavior: 'smooth' });
 
             currentSection = section1;
         }
@@ -75,10 +73,10 @@ window.addEventListener('wheel',function(event){
 });
 
 // scroll - animation 살짝
-window.addEventListener('scroll', function(){
-    if(section2.getBoundingClientRect().top===0){
+window.addEventListener('scroll', function () {
+    if (section2.getBoundingClientRect().top === 0) {
         section2.children[0].classList.add('text-animation');
- }else{
-    section2.children[0].classList.remove('text-animation');
- }
+    } else {
+        section2.children[0].classList.remove('text-animation');
+    }
 });

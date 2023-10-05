@@ -3,8 +3,17 @@ import UnderPostList from '../components/UnderPostList';
 import PageNation from '../components/PageNation';
 import Counter from '../components/Counter';
 import RightModal from '../components/RightModal';
+import { faBookmark } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
 
 const ViewPost = () => {
+    const [bookMark, setBookMark] = useState(false);
+
+    const handleBookMark = () => {
+        setBookMark(!bookMark);
+        alert('게시물이 저장됐습니다.');
+    };
     return (
         <>
             <main id="main">
@@ -62,10 +71,25 @@ const ViewPost = () => {
                             <Counter></Counter>
                         </div>
 
-                        <button id="scrap" className="scrap">
-                            스크랩
-                            <span>🔖</span>
-                        </button>
+                        {/*여기 더 다듬어야됨 북마크 해제 시 alert 문구*/}
+                        <div type="button" className="scrap">
+                            <div
+                                onClick={() => {
+                                    handleBookMark();
+                                }}
+                            >
+                                <div className="scp">스크랩</div>
+                                {bookMark ? (
+                                    <FontAwesomeIcon
+                                        icon={faBookmark}
+                                        style={{ color: 'white', border: '2px solid black' }}
+                                        className="sc"
+                                    />
+                                ) : (
+                                    <FontAwesomeIcon icon={faBookmark} style={{ color: '#ff7f38' }} className="sc" />
+                                )}
+                            </div>
+                        </div>
                     </div>
                     <div className="listAndEdit">
                         <div className="left">
