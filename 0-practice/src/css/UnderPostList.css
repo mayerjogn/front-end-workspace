@@ -15,19 +15,13 @@ h2 {
     font-size: 1em;
 }
 
-#boardList .item {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid rgb(0, 0, 0 /5%);
-}
-
 #boardList,
 #title,
 .searchAndWrite {
     padding: 0 10px;
 }
 
-#boardList .simple .item {
+#boardList .simple .item1 {
     padding: 5px;
 }
 
@@ -37,22 +31,22 @@ h2 {
     width: 100%;
 }
 
-#boardList .item .titleContainer {
+#boardList .titleContainer {
     display: flex;
     align-items: center;
     padding: 2px 0;
     overflow: hidden;
 }
 
-#boardList.simple .item .title .text {
+#boardList.simple .title .text {
     font-size: 0.9em;
 }
 
-#boardList.simple .item .etc {
+#boardList.simple .etc1 {
     width: 30%;
 }
 
-#boardList .item .etc {
+#boardList .etc1 {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -60,75 +54,88 @@ h2 {
     white-space: nowrap;
 }
 
-#boardList .simple .item .etc .nickName {
+#boardList .etc1 .nickName {
     display: inline-flex;
     flex: 4;
     align-items: center;
     justify-content: center;
+    font-size: 0.9em;
 }
 
-#boardList .simple .item .etc > div {
+#boardList .etc1 > div {
     text-align: center;
 }
 
-#boardList .simple .item .etc .field {
+#boardList .etc1 .field {
     flex: 3;
+    font-size: 0.9em;
 }
 
-#boardList .simple .item .etc .number {
+#boardList .etc1 .number {
     flex: 2;
+    font-size: 0.9em;
 }
 
-#boardList .simple .item .info {
+#boardList .info2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* box-shadow: var(--shadows-gray-blue-3-5-b-box-shadow, 0px 2px 5px 0px rgba(238, 10, 10, 0.03)); */
+    background-color: antiquewhite;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 7px;
 }
 
-#boardList .simple .item .titleContainer {
+#boardList .titleContainer {
     max-width: 70%;
 }
 
-#boardList .item .category {
+#boardList .item1 .category {
     box-sizing: border-box;
     padding: 4px 6px;
     margin-right: 8px;
     font-size: 0.9em;
-    color: black;
+    color: white;
     word-break: keep-all;
     white-space: nowrap;
-    background-color: rgb(0, 0, 0 /5%);
-    border: solid 1px rgb(0, 0, 0 /10%);
+    background-color: #ff7f38;
+    border: solid 1px #ff7f38;
     border-radius: 6px;
 }
 
-#boardList .simple .item .title {
+#boardList .simple .item1 .title {
     width: 100%;
 }
 
-#boardList .item .info i {
-    margin-right: 4px;
-    background-repeat: no-repeat;
-    background-position: center;
+#boardList .info2 .titleContainer .title .text1 {
+    display: flex;
+    justify-content: center;
+
+    /*이거 건들면 ㅈ됨 ㄹㅇ 전체 컴포넌트 페이지 태그들 이름 다시 정리해야함*/
 }
 
-#boardList .simple .item .title .text {
+#boardList .simple .item1 .title .text .text1 {
     font-size: 0.9em;
 }
 
-#boardList .item .title .text {
+#boardList .item1 .title .text .text1 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-#boardList .item .etc .dot {
+#boardList .item1 .etc1 .dot {
     display: none;
 }
 
-#boardList .item .title .commentCount,
-#boardList .simple .item .commentCount {
-    display: flex;
+.text2 {
+    font-size: 0.9em;
+}
+
+#boardList .item1 .title .commentCount,
+#boardList .simple .item1 .commentCount {
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     height: 16px;
@@ -140,17 +147,18 @@ h2 {
     border-radius: 3px;
 }
 
-/* #boardList .item .info svg, */
-#boardList .item .info i {
+#boardList .item1 .info3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#boardList .item1 .info3 i {
     margin-right: 4px;
     background-repeat: no-repeat;
     background-position: center;
 }
-/* #boardList .item .title .text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-} */
 
 .pagination {
     display: flex;

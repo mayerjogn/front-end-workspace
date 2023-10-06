@@ -9,11 +9,16 @@ import { useState } from 'react';
 
 const ViewPost = () => {
     const [bookMark, setBookMark] = useState(false);
-
+    // const [likeCount, setLikeCount] = useState(0);
     const handleBookMark = () => {
         setBookMark(!bookMark);
-        alert('게시물이 저장됐습니다.');
+        if (bookMark) {
+            alert('게시물이 저장됐습니다.');
+        } else {
+            alert('게시물 저장이 해제됐습니다.');
+        }
     };
+
     return (
         <>
             <main id="main">
@@ -47,7 +52,7 @@ const ViewPost = () => {
                                     <div className="dot"></div>
                                     <div className="viewCount">안에 svg랑 path 넣어줘야함</div>
                                     <div className="dot"></div>
-                                    <div className="likeCount">👍 따봉갯수</div>
+                                    <div className="likeCount">👍{/*여기도 카운팅 올라가는건 나중에 생각하자*/}</div>
                                 </div>
                                 <div className="right">
                                     <RightModal></RightModal>
@@ -68,23 +73,17 @@ const ViewPost = () => {
 
                     <div className="likeContainer">
                         <div id="like" className="like">
-                            <Counter></Counter>
+                            <Counter></Counter> {/*count={likeCount} setCount={setLikeCount}*/}
                         </div>
-
-                        {/*여기 더 다듬어야됨 북마크 해제 시 alert 문구*/}
-                        <div type="button" className="scrap">
-                            <div
-                                onClick={() => {
-                                    handleBookMark();
-                                }}
-                            >
+                        <div
+                            onClick={() => {
+                                handleBookMark();
+                            }}
+                        >
+                            <div type="button" className="scrap">
                                 <div className="scp">스크랩</div>
                                 {bookMark ? (
-                                    <FontAwesomeIcon
-                                        icon={faBookmark}
-                                        style={{ color: 'white', border: '2px solid black' }}
-                                        className="sc"
-                                    />
+                                    <FontAwesomeIcon icon={faBookmark} style={{ color: 'thistle' }} className="sc" />
                                 ) : (
                                     <FontAwesomeIcon icon={faBookmark} style={{ color: '#ff7f38' }} className="sc" />
                                 )}
@@ -110,7 +109,7 @@ const ViewPost = () => {
                     </div>
                     <div className="commentTitle">댓글</div>
                     <div className="comments" id="comments">
-                        더 추가해야함
+                        여러 이용자들이 댓글쓴거랑 베댓 나오게해야함
                     </div>
                     <div className="commentContainer" id="newComment">
                         <div className="contentContainer">
@@ -138,51 +137,6 @@ const ViewPost = () => {
 
                 <UnderPostList />
                 <PageNation></PageNation>
-                {/* <section id="modal" className="class">
-                    <div class="container share">
-                        <div class="urlLink">
-                            <a href="#"></a>
-                        </div>
-                    </div>
-                    <div class="container removeArticle">
-                        <form action="#" method="POST">
-                            <input type="password" name="password" placeholder="비밀번호" maxlength="100" />
-                            <button>확인</button>
-                        </form>
-                    </div>
-                    <div class="container removeComment">
-                        <input type="password" name="password" placeholder="비밀번호" maxlength="100" />
-                        <button>확인</button>
-                    </div>
-                    <div class="container report">
-                        <input type="hidden" name="type" />
-                        <input type="hidden" name="id" />
-                        <textarea name="content" placeholder="신고 내용" maxlength="200"></textarea>
-                        <button>확인</button>
-                    </div>
-
-                    <div class="userBan">
-                        <input type="hidden" name="type" />
-                        <input type="hidden" name="id" />
-                        <textarea name="content" placeholder="차단 사유" maxlength="200"></textarea>
-                        <button>확인</button>
-                    </div>
-                    <div class="container ban">
-                        <input type="hidden" name="id" />
-                        <input type="hidden" name="type" />
-                        <input type="hidden" name="contentId" />
-                        <input type="text" name="duration" placeholder="정지 기간 (일)" maxlength="3" />
-                        <input type="text" name="reason" placeholder="정지 사유" maxlength="100" />
-                        <input
-                            type="text"
-                            name="displayReason"
-                            placeholder="사용자에게 보일 정지 사유"
-                            maxlength="100"
-                        />
-                        <button>확인</button>
-                    </div>
-                    <div className="background"></div>
-                </section> */}
             </main>
         </>
     );

@@ -7,41 +7,43 @@ const UnderPostList = () => {
 
             <section id="boardList" className="simple">
                 <div className="item header">
-                    <div className="info">
+                    <div className="info2">
                         <div className="titleContainer">
                             <span className="title">
-                                <span className="text">제목</span>
+                                <span className="text1">제목</span>
                             </span>
                         </div>
-                        <div className="etc">
+                        <div className="etc1">
                             <div className="nickName">글쓴이</div>
-                            <div className="datetime filed">날짜</div>
+                            <div className="datetime field">날짜</div>
                             <div className="viewCount number">조회</div>
                             <div className="likeCount number">추천</div>
                         </div>
                     </div>
                 </div>
-                <a className="item" href="#">
-                    <div className="info">
+                <a className="item1" href="#">
+                    <div className="info3">
                         <div className="titleContainer">
                             <span className="category">기타취미</span>
                             <span className="title">
                                 <i></i>
-                                <span className="text">기타취미 &nbsp;</span>
-                                <span className="commentCount">댓글 갯수11</span>
+                                <span className="text">[기타취미] &nbsp;</span>
+                                <span className="text2">글제목</span>
+                                <span className="commentCount">(댓글 갯수)11</span>
                             </span>
                         </div>
-                        <div className="etc">
-                            <div className="nickName">유저닉네임</div>
+                        <div className="etc1">
+                            <div className="nickName">글쓴이</div>
                             <div className="dot"></div>
-                            <div className="datetime field"></div>
+                            <div className="datetime field">날짜</div>
                             <div className="dot"></div>
                             <div className="viewCount number">
                                 <i className="view">조회수</i>
                             </div>
+
                             <div className="dot"></div>
                             <div className="likeCount number">
-                                <i className="like">👍</i>
+                                <i className="like">추천</i>
                             </div>
                         </div>
                     </div>

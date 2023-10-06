@@ -21,10 +21,15 @@ const RightModal = () => {
             alert('홍수민이 복사됐습니다.');
         } catch (e) {}
     };
-    // const [textValue, setTextValue] = useState('');
-    // const handleSetValue = (e) => { 오전에 신고 버튼 누르면 텍스트에어리어 뜨는거 만들기
-    //     setTextValue(e.target.value);
-    // };
+
+    const [reportText, setReportText] = useState('');
+    const [reportModalOpen, setReportModalopen] = useState(false);
+    const handleReport = () => {
+        // 여기다가 신고 내용을 서버로 보내던 해야함
+        alert('신고가 접수되었습니다.');
+        setReportText(''); // 신고 접수 후 텍스트 초기화
+        setReportModalopen(false);
+    };
 
     return (
         <div className="right-modal">
@@ -47,7 +52,7 @@ const RightModal = () => {
                     <div className="popUp active">
                         <ul>
                             <li className="report">
-                                <div type="button">
+                                <div type="button" onClick={() => setReportModalopen(true)}>
                                     <FontAwesomeIcon icon={faFlag} style={{ color: '#ff7f38' }} />
                                     <span className="size1">신고</span>
                                 </div>
@@ -69,6 +74,39 @@ const RightModal = () => {
                                 </div>
                             </li>
                         </ul>
+                    </div>
+                </div>
+            )}
+            {reportModalOpen && (
+                <div className="report-modal">
+                    <div className="report-modal-content">
+                        <textarea
+                            style={{
+                                backgroundColor: 'antiquewhite',
+                                border: '1px solid',
+                                borderRadius: '5px',
+                                resize: 'none',
+                                inlineSize: '200px',
+                                blockSize: '100px',
+                            }}
+                            maxLength={200}
+                            value={reportText}
+                            onChange={(e) => setReportText(e.target.value)}
+                            placeholder="신고 사유를 입력하세요."
+                        />
+                        <br />
+                        <button onClick={handleReport} style={{ fontSize: '1em', color: 'grey' }}>
+                            신고🚫
+                        </button>
+                        <button
+                            onClick={() => {
+                                setReportText('');
+                                setReportModalopen(false);
+                            }}
+                            style={{ fontSize: '1em', color: 'grey' }}
+                        >
+                            닫기❌
+                        </button>
                     </div>
                 </div>
             )}

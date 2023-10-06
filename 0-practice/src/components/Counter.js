@@ -1,7 +1,5 @@
-import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-//보류
 
 const StyledLikeBtn = styled.button`
     display: flex;
@@ -19,10 +17,6 @@ const StyledLikeBtn = styled.button`
     align-items: center;
 `;
 
-// const Btn = ({ text, click }) => {
-//     return <button onClick={click}>{text}</button>;
-// };
-
 const Counter = () => {
     const [counter, setCounter] = useState(0);
     const plus = () => {
@@ -30,10 +24,8 @@ const Counter = () => {
         alert('코하하하하');
     };
     return (
-        <StyledLikeBtn>
-            <div type="button" style={{ border: 'none', backgroundColor: 'antiquewhite' }} onClick={plus}>
-                코하하👍
-            </div>
+        <StyledLikeBtn onClick={plus}>
+            코하하👍
             <span style={{ color: '#ff7f38' }}>{counter}</span>
         </StyledLikeBtn>
     );
