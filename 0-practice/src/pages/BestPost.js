@@ -1,5 +1,5 @@
 import '../css/BestPost.css';
-import PageNation from'../components/PageNation';
+import PageNation from '../components/PageNation';
 
 const BestPost = () => {
     return (
@@ -34,7 +34,6 @@ const BestPost = () => {
                                 <div className="dot">{/* :: after */}</div>
                                 <div className="likeCount">
                                     <span className="like Icon">👍</span>
-                                    
                                 </div>
                             </div>
                         </div>
@@ -69,13 +68,12 @@ const BestPost = () => {
                                 <div className="dot">{/* :: after */}</div>
                                 <div className="likeCount">
                                     <span className="like Icon">👍</span>
-                                    
                                 </div>
                             </div>
                         </div>
                     </a>
                 </section>
-                <PageNation></PageNation>
+                <PageNation />
             </article>
         </>
     );
